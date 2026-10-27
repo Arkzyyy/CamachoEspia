@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGENCIA DE ESPIONAJE CAMACHO | Reclutamiento Ultrasecreto</title>
+  <meta name="description" content="Portal oficial de reclutamiento de la red de espías de EL CAMACHO. Conquista mundial, secuestro de tomates y espionaje cuántico.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mode-classified">
+  <!-- Scanlines & Matrix CRT overlay effect -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Top Alert Bar -->
+  <aside class="classified-marquee" aria-label="Aviso de confidencialidad">
+    <div class="marquee-track">
+      <span>⚠️ DOCUMENTO CLASIFICADO NIVEL OMEGA 999 ⚠️</span>
+      <span>•</span>
+      <span>ACCESO RESTRINGIDO: SOLO OJOS DEL SUPREMO LÍDER EL CAMACHO Y ASPIRANTES DIGNOS</span>
+      <span>•</span>
+      <span>OPERACIÓN TOMATE EN CURSO</span>
+      <span>•</span>
+      <span>SI LEES ESTO SIN AUTORIZACIÓN, UN KIRBY ESPÍA ESTÁ OBSERVANDO TU HISTORIAL</span>
+      <span>•</span>
+      <span>⚠️ PROTOCOLO SANS ACTIVADO ⚠️</span>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">TOP SECRET</span>
+        <div class="brand-text">
+          <span class="brand-title">A.E.C.</span>
+          <span class="brand-sub">Agencia de Espionaje Camacho</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="main-nav">
+        <a href="#doctrina">Doctrina</a>
+        <a href="#lider">El Camacho</a>
+        <a href="#misiones">Misiones</a>
+        <a href="#enemigos">Enemigos</a>
+        <a href="#test">Test de Aptitud</a>
+        <a href="#reclutamiento" class="btn-nav">¡ÚNETE AHORA!</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="toggle-alarm" class="btn-ctrl" title="Alternar Alarma Táctica">
+          <span class="ctrl-icon">🚨</span>
+          <span class="ctrl-label">Alarma</span>
+        </button>
+        <button id="sound-fx-btn" class="btn-ctrl" title="Efectos de Sonido Sintetizados">
+          <span class="ctrl-icon">🔊</span>
+          <span class="ctrl-label">SFX: ON</span>
+        </button>
+        <button id="mobile-menu-btn" class="btn-ctrl btn-hamburger" aria-label="Alternar menú móvil">
+          <span class="ctrl-icon">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg-grid"></div>
+      <div class="container hero-content">
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span> DIVISIÓN DE OPERACIONES ENCUBIERTAS & DESORDEN CÓSMICO
+        </div>
+
+        <h1 class="hero-title">
+          ¿TIENES LO NECESARIO PARA SER UN <span class="highlight-glitch" data-text="ESPÍA CAMACHO">ESPÍA CAMACHO</span>?
+        </h1>
+
+        <p class="hero-desc">
+          Si buscabas un trabajo ordinario de oficina, vete a llenar hojas de cálculo. Aquí en la red de <strong>EL CAMACHO</strong> operamos en las sombras del multiverso: hackeamos semáforos intergalácticos, derrocamos gobiernos antes del desayuno y ejecutamos el rescate extorsivo de tomates maduros.
+        </p>
+
+        <div class="hero-stats-banner">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Éxito en Sabotajes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4,812</span>
+            <span class="stat-text">Tomates en Cautiverio</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-text">Imperios Colonizados</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">0</span>
+            <span class="stat-text">Agentes Atrapados*</span>
+          </div>
+        </div>
+        <small class="hero-stat-note">*Los que fueron atrapados insisten en que eran hologramas o parientes lejanos.</small>
+
+        <div class="hero-actions">
+          <a href="#reclutamiento" class="btn-primary" id="hero-join-btn">
+            <span class="btn-glitch"></span>
+            📜 FIRMAR JURAMENTO DE SUMISIÓN
+          </a>
+          <a href="#test" class="btn-secondary">
+            🎯 EVALUAR MI NIVEL DE ESPIONAJE
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Introducción al Espionaje -->
+    <section id="doctrina" class="section doctrine-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAPÍTULO I // FUNDAMENTOS</span>
+          <h2 class="section-title">INTRODUCCIÓN AL ESPIONAJE MODERNO</h2>
+          <p class="section-subtitle">Lo que la CIA, el MI6 y el consorcio de tu edificio no quieren que sepas.</p>
+        </div>
+
+        <div class="doctrine-grid">
+          <article class="doctrine-card">
+            <div class="card-icon">🕶️</div>
+            <h3>La Regla de la Gabardina</h3>
+            <p>Un verdadero espía Camacho jamás se quita las gafas de sol oscuras, especialmente a las 3:00 AM en habitaciones completamente a oscuras. La ceguera temporal es solo un costo menor para mantener el estilo táctico impecable.</p>
+          </article>
+
+          <article class="doctrine-card">
+            <div class="card-icon">🎭</div>
+            <h3>El Arte del Camuflaje Supremo</h3>
+            <p>Si un guardia de seguridad sospecha de ti, no corras: quédate inmóvil y finge ser una planta de plástico o un extintor de incendios. El 99.4% de los guardias del mundo evitan interactuar con muebles.</p>
+          </article>
+
+          <article class="doctrine-card">
+            <div class="card-icon">📡</div>
+            <h3>Fingir Demencia Estratégica</h3>
+            <p>Cuando te intercepten transfiriendo secretos confidenciales a una base extraterrestre, mira fijamente al interrogador, haz sonidos de fax antiguo y pregunta si tienen WiFi gratis para visitantes.</p>
+          </article>
+
+          <article class="doctrine-card">
+            <div class="card-icon">🍅</div>
+            <h3>La Doctrina del Tomate Rojo</h3>
+            <p>El tomate no es solo un fruto botánico; es la moneda clandestina de cambio universal. Quien controla el suministro global de salsa y ensaladas, controla el destino político de las potencias mundiales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: El Líder Supremo EL CAMACHO -->
+    <section id="lider" class="section leader-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">NIVEL DIOS // BIOGRAFÍA NO AUTORIZADA</span>
+          <h2 class="section-title">EL LÍDER SUPREMO: <span class="camacho-glow">EL CAMACHO</span></h2>
+          <p class="section-subtitle">Entidad omnisciente, maestro del sigilo, devorador de universos y humorista interdimensional.</p>
+        </div>
+
+        <div class="leader-showcase">
+          <!-- Leader Avatar / Portrait Frame -->
+          <div class="leader-portrait-card">
+            <div class="portrait-header">
+              <span class="status-indicator"></span>
+              <span class="portrait-title">REGISTRO VISUAL: SUJETO 00-CAMACHO</span>
+            </div>
+
+            <div class="portrait-viewport" id="portrait-viewport">
+              <!-- Visual Avatar: Kirby & Sans Fusion -->
+              <div class="camacho-avatar-wrapper" id="camacho-avatar">
+                <!-- SVG Masterpiece: Kirby + Sans + Spy Fedora & Trench Coat -->
+                <svg class="camacho-svg" viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <!-- Glowing eye effect -->
+                    <filter id="sans-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                    <radialGradient id="kirby-body-grad" cx="40%" cy="40%" r="60%">
+                      <stop offset="0%" stop-color="#ff9ecb"/>
+                      <stop offset="70%" stop-color="#ff66a3"/>
+                      <stop offset="100%" stop-color="#d63375"/>
+                    </radialGradient>
+                    <radialGradient id="sans-skull-grad" cx="45%" cy="35%" r="55%">
+                      <stop offset="0%" stop-color="#ffffff"/>
+                      <stop offset="75%" stop-color="#e2e8f0"/>
+                      <stop offset="100%" stop-color="#94a3b8"/>
+                    </radialGradient>
+                    <linearGradient id="coat-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1e293b"/>
+                      <stop offset="50%" stop-color="#0f172a"/>
+                      <stop offset="100%" stop-color="#020617"/>
+                    </linearGradient>
+                    <linearGradient id="fedora-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#334155"/>
+                      <stop offset="50%" stop-color="#0f172a"/>
+                      <stop offset="100%" stop-color="#334155"/>
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Spy Trench Coat Back / Collar -->
+                  <path d="M 90 270 L 60 380 L 340 380 L 310 270 Z" fill="url(#coat-grad)" stroke="#00ffcc" stroke-width="2"/>
+                  <path d="M 120 280 L 150 380 L 250 380 L 280 280 Z" fill="#090d16"/>
+                  
+                  <!-- Blue Sans Hoodie trim underneath -->
+                  <path d="M 140 285 Q 200 320 260 285 L 250 360 L 150 360 Z" fill="#2563eb" opacity="0.85"/>
+                  <path d="M 170 290 L 170 360 M 230 290 L 230 360" stroke="#ffffff" stroke-width="3" stroke-dasharray="4,4"/>
+
+                  <!-- Kirby Feet (Deep Red / Ruby) -->
+                  <ellipse cx="110" cy="365" rx="50" ry="25" fill="#c026d3" stroke="#581c87" stroke-width="3"/>
+                  <ellipse cx="290" cy="365" rx="50" ry="25" fill="#c026d3" stroke="#581c87" stroke-width="3"/>
+
+                  <!-- Kirby Arms / Little Spherical Hands -->
+                  <!-- Left Hand holding Top-Secret File -->
+                  <circle cx="85" cy="235" r="38" fill="url(#kirby-body-grad)" stroke="#be185d" stroke-width="3"/>
+                  <!-- Secret Folder -->
+                  <rect x="35" y="210" width="45" height="55" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="2" transform="rotate(-15 50 230)"/>
+                  <text x="42" y="235" font-size="9" font-family="'Courier New', monospace" font-weight="bold" fill="#78350f" transform="rotate(-15 50 230)">TOP SEC</text>
+                  <text x="42" y="247" font-size="12" transform="rotate(-15 50 230)">🍅</text>
+
+                  <!-- Right Hand holding Spy Magnifying Glass / Laser Gun -->
+                  <circle cx="315" cy="235" r="38" fill="url(#kirby-body-grad)" stroke="#be185d" stroke-width="3"/>
+                  <line x1="335" y1="230" x2="370" y2="210" stroke="#00ffcc" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="370" cy="210" r="14" fill="none" stroke="#00ffcc" stroke-width="4"/>
+
+                  <!-- Supreme Body (Kirby Body with Sans Hybrid Morph) -->
+                  <circle id="kirby-main-body" cx="200" cy="210" r="105" fill="url(#kirby-body-grad)" stroke="#be185d" stroke-width="4"/>
+
+                  <!-- Kirby Cheeks (Blushing pink ovals) -->
+                  <ellipse id="kirby-blush-left" cx="130" cy="225" rx="14" ry="9" fill="#f43f5e" opacity="0.8"/>
+                  <ellipse id="kirby-blush-right" cx="270" cy="225" rx="14" ry="9" fill="#f43f5e" opacity="0.8"/>
+
+                  <!-- Left Eye: Classic Kirby Innocent Spy Eye -->
+                  <g id="kirby-eye">
+                    <ellipse cx="165" cy="180" rx="12" ry="24" fill="#0f172a"/>
+                    <ellipse cx="165" cy="170" rx="9" ry="14" fill="#2563eb"/>
+                    <circle cx="165" cy="165" r="5" fill="#ffffff"/>
+                  </g>
+
+                  <!-- Right Eye: SANS BAD TIME EYE (Glowing Neon Cyan + Yellow flare) -->
+                  <g id="sans-eye-group">
+                    <!-- Black eye socket -->
+                    <ellipse cx="235" cy="180" rx="14" ry="18" fill="#000000" stroke="#38bdf8" stroke-width="2"/>
+                    <!-- Fiery Cyan / Yellow Sans glowing core -->
+                    <circle id="sans-glow-core" cx="235" cy="180" r="7" fill="#00ffff" filter="url(#sans-glow)"/>
+                    <circle cx="235" cy="180" r="3" fill="#fef08a"/>
+                    <!-- Animated magical flames radiating from Sans Eye -->
+                    <path class="flame-aura" d="M 235 173 Q 248 150 240 135 Q 230 155 235 173 Z" fill="#00ffff" opacity="0.75" filter="url(#sans-glow)"/>
+                    <path class="flame-aura-alt" d="M 235 175 Q 255 160 260 145 Q 245 165 235 175 Z" fill="#38bdf8" opacity="0.6"/>
+                  </g>
+
+                  <!-- SANS Iconic Grinning Skeletal Teeth (Morphing onto Kirby's face) -->
+                  <g id="sans-smile">
+                    <path d="M 160 235 Q 200 265 240 235 Q 200 248 160 235 Z" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+                    <line x1="180" y1="240" x2="180" y2="251" stroke="#000000" stroke-width="2"/>
+                    <line x1="200" y1="242" x2="200" y2="253" stroke="#000000" stroke-width="2"/>
+                    <line x1="220" y1="240" x2="220" y2="251" stroke="#000000" stroke-width="2"/>
+                  </g>
+
+                  <!-- Spy Sunglasses hanging or slanted (cool secret agent glasses) -->
+                  <g id="spy-shades" opacity="0.95">
+                    <polygon points="125,160 195,160 185,195 135,195" fill="#000000" stroke="#00ffcc" stroke-width="2"/>
+                    <polygon points="205,160 275,160 265,195 215,195" fill="#000000" stroke="#00ffcc" stroke-width="2"/>
+                    <line x1="195" y1="172" x2="205" y2="172" stroke="#00ffcc" stroke-width="3"/>
+                    <!-- Lens reflection -->
+                    <line x1="135" y1="185" x2="175" y2="168" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                    <line x1="215" y1="185" x2="255" y2="168" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+                  </g>
+
+                  <!-- Spy Fedora Hat atop The Camacho -->
+                  <ellipse cx="200" cy="115" rx="100" ry="22" fill="url(#fedora-grad)" stroke="#00ffcc" stroke-width="2"/>
+                  <path d="M 130 115 C 130 65, 160 45, 200 48 C 240 45, 270 65, 270 115 Z" fill="url(#fedora-grad)" stroke="#00ffcc" stroke-width="2"/>
+                  <!-- Fedora Ribbon with Secret Agency Badge -->
+                  <path d="M 130 108 Q 200 118 270 108 L 270 116 Q 200 126 130 116 Z" fill="#ef4444"/>
+                  <circle cx="200" cy="112" r="5" fill="#eab308"/>
+                </svg>
+              </div>
+
+              <!-- Morph Switcher Controls -->
+              <div class="morph-controls">
+                <span class="morph-label">Forma Cuántica Actual:</span>
+                <div class="morph-btn-group">
+                  <button class="morph-btn active" data-form="hybrid">Híbrido Sans-Kirby</button>
+                  <button class="morph-btn" data-form="kirby">Kirby Táctico</button>
+                  <button class="morph-btn" data-form="sans">Sans "Megalovania"</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="portrait-quote">
+              <span class="quote-symbol">“</span>
+              <p id="leader-quote">
+                <em>"¿Quieres pasar un mal rato o prefieres que te inhale con todo y tus tomates? Tú decides. Bienvenido a mi agencia."</em>
+              </p>
+              <cite>— El Camacho, Comandante Supremo</cite>
+            </div>
+          </div>
+
+          <!-- Leader Dossier / Facts -->
+          <div class="leader-dossier">
+            <div class="dossier-box">
+              <div class="dossier-stamp">CONFIDENCIAL</div>
+              <h3 class="dossier-heading">FICHA TÉCNICA DEL SUPREMO</h3>
+              
+              <ul class="dossier-specs">
+                <li>
+                  <span class="spec-name">Nombre Código:</span>
+                  <span class="spec-value">EL CAMACHO (Sujeto Alfa)</span>
+                </li>
+                <li>
+                  <span class="spec-name">Aspecto Visual:</span>
+                  <span class="spec-value">Esfera Rosa con Huesos, Sombrero Fedora y Ojo Celestial Fulgurante</span>
+                </li>
+                <li>
+                  <span class="spec-name">Banda Sonora:</span>
+                  <span class="spec-value">Megalovania reproducida en flauta dulce a las 4 AM</span>
+                </li>
+                <li>
+                  <span class="spec-name">Nivel de Amenaza:</span>
+                  <span class="spec-value status-critical">PELIGRO CÓSMICO // INDETERMINADO</span>
+                </li>
+                <li>
+                  <span class="spec-name">Alimento Favorito:</span>
+                  <span class="spec-value">Tomates maduros arrebatados de pizzerías italianas</span>
+                </li>
+                <li>
+                  <span class="spec-name">Debilidad Identificada:</span>
+                  <span class="spec-value">Ninguna (rumores dicen que tomar una siesta de 12 horas)</span>
+                </li>
+              </ul>
+
+              <div class="dossier-bio">
+                <p>Nacido en una dimensión desconocida entre Dream Land y el subsuelo de Undertale, <strong>EL CAMACHO</strong> unificó las dos mayores fuerzas de la naturaleza: la ternura voraz que devora galaxias enteras y el sarcasmo esquelético capaz de esquivar cualquier misil balístico.</p>
+                <p>Fundó la Agencia con un objetivo transparente: divertirse, gobernar el mundo desde las sombras y mantener a los tomates del planeta bajo estricta custodia personal.</p>
+              </div>
+
+              <div class="dossier-interactive">
+                <button id="hear-wisdom-btn" class="btn-terminal">
+                  🎙️ ESCUCHAR ORDEN DEL CAMACHO
+                </button>
+                <div id="wisdom-display" class="wisdom-screen" aria-live="polite">
+                  > Haz clic para sintonizar el canal psíquico de El Camacho...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Tareas y Misiones Oficiales -->
+    <section id="misiones" class="section missions-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">OPERACIONES ACTIVAS // CARTERA DE TRABAJO</span>
+          <h2 class="section-title">¿QUÉ HACE UN ESPÍA CAMACHO?</h2>
+          <p class="section-subtitle">Si superas el entrenamiento, estas serán tus misiones habituales de lunes a domingo.</p>
+        </div>
+
+        <div class="missions-grid">
+          <!-- Misión 1: Espiar a tus hijos -->
+          <div class="mission-card" data-danger="3">
+            <div class="mission-status">OPERACIÓN EN CURSO</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">👶🕵️</span>
+              <span class="mission-badge">DOMÉSTICO</span>
+            </div>
+            <h3 class="mission-title">Espiar a tus Hijos (y a los del Vecino)</h3>
+            <p class="mission-desc">
+              ¿Tu hijo dice que está estudiando matemáticas pero el brillo de su pantalla parece Fortnite? Instalamos micrófonos de alta fidelidad dentro de ositos de peluche y decodificamos el lenguaje secreto de la Generación Alfa con IA cuántica.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐☆☆ (Requiere paciencia con los berrinches)</span>
+            </div>
+          </div>
+
+          <!-- Misión 2: Derrocar gobiernos -->
+          <div class="mission-card" data-danger="5">
+            <div class="mission-status critical">ALTA PRIORIDAD</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🏛️💥</span>
+              <span class="mission-badge red">GEOPOLÍTICO</span>
+            </div>
+            <h3 class="mission-title">Derrocamiento de Gobiernos en Días Festivos</h3>
+            <p class="mission-desc">
+              Nuestra especialidad de los martes por la tarde. Cambiamos la constitución nacional mientras los ministros duermen la siesta, reemplazamos discursos presidenciales por recetas de guacamole y proclamamos a El Camacho como Protector Vitalicio.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐⭐⭐ (Fácil si llevas sobornos de donas)</span>
+            </div>
+          </div>
+
+          <!-- Misión 3: Hackeo ético y no ético -->
+          <div class="mission-card" data-danger="4">
+            <div class="mission-status">OPERACIÓN CIBERNÉTICA</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">💻💀</span>
+              <span class="mission-badge purple">CYBERNETICS</span>
+            </div>
+            <h3 class="mission-title">Hackeo Ético y No Ético (Simultáneo)</h3>
+            <p class="mission-desc">
+              Hackeamos el Pentágono de forma ética para avisarles de una vulnerabilidad, e inmediatamente de forma no ética cambiamos sus contraseñas a <code>"camacho_amo_supremo_123"</code> y ponemos fotos de Kirby en todos los radares del Atlántico.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐⭐☆ (Cuidado con el firewall de la abuela)</span>
+            </div>
+          </div>
+
+          <!-- Misión 4: Conquista mundial -->
+          <div class="mission-card" data-danger="5">
+            <div class="mission-status critical">FASE GLOBAL</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🌍👑</span>
+              <span class="mission-badge gold">DOMINACIÓN</span>
+            </div>
+            <h3 class="mission-title">Conquista y Reordenamiento Mundial</h3>
+            <p class="mission-desc">
+              La Tierra es muy desordenada. Los espías Camacho tienen asignada la repartición de continentes según afinidad musical, la prohibición del tráfico los lunes y la declaración del Día Internacional del Descanso Obligatorio con Pantuflas.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐⭐⭐ (Faltan tachuelas para el mapa)</span>
+            </div>
+          </div>
+
+          <!-- Misión 5: Espionaje alienígena -->
+          <div class="mission-card" data-danger="4">
+            <div class="mission-status">INTERESTELAR</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🛸👽</span>
+              <span class="mission-badge cyan">COSMOS</span>
+            </div>
+            <h3 class="mission-title">Espionaje de Civilizaciones Alienígenas</h3>
+            <p class="mission-desc">
+              Infiltración en el Imperio de Alfa Centauri y la Nebulosa de Orión. Nuestros agentes averiguan si los extraterrestres tienen memes superiores, si comen pizza con piña y por qué aún no nos han visitado formalmente (spoiler: nos tienen miedo).
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐⭐☆ (Requiere traje espacial o aguantar la respiración)</span>
+            </div>
+          </div>
+
+          <!-- Misión 6: Secuestro de tomates -->
+          <div class="mission-card" data-danger="5">
+            <div class="mission-status special">OBJETIVO SAGRADO</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🍅🔒</span>
+              <span class="mission-badge red-dark">ALTA SEGURIDAD</span>
+            </div>
+            <h3 class="mission-title">Secuestro Estratégico de Tomates</h3>
+            <p class="mission-desc">
+              Operación insignia de la Agencia. Interceptamos cargamentos de huertas hidropónicas y supermercados gourmet. Cada tomate secuestrado es resguardado en bóvedas acorazadas bajo temperatura controlada para el consumo exclusivo de El Camacho.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐⭐⭐ (El tomate puede manchar la gabardina)</span>
+            </div>
+          </div>
+
+          <!-- Misión 7: Tareas extra y sabotajes cotidianos -->
+          <div class="mission-card" data-danger="2">
+            <div class="mission-status">MISIÓN SECUNDARIA</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🧦☕</span>
+              <span class="mission-badge">TRAVESURAS</span>
+            </div>
+            <h3 class="mission-title">Desaparición de Calcetines & Sabotaje de Café</h3>
+            <p class="mission-desc">
+              ¿Por qué en tu lavadora siempre desaparece un solo calcetín del par? Fue un novato de Camacho practicando extracción sigilosa. También enfriamos el café de los embajadores rivales exactamente 3 segundos antes de que le den el primer sorbo.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐☆☆☆ (Puro gozo psicológico)</span>
+            </div>
+          </div>
+
+          <!-- Misión 8: Robo de recetas secretas -->
+          <div class="mission-card" data-danger="3">
+            <div class="mission-status">INFILTRACIÓN GOURMET</div>
+            <div class="mission-header-row">
+              <span class="mission-icon">🍗🥤</span>
+              <span class="mission-badge">ESPIONAJE INDUSTRIAL</span>
+            </div>
+            <h3 class="mission-title">Extracción de las 11 Hierbas y la Fórmula de la Cola</h3>
+            <p class="mission-desc">
+              Ya tenemos 10 de las 11 hierbas del coronel y descubrimos que el ingrediente secreto del refresco más famoso del mundo era simplemente agua con más azúcar de la que admite la física moderna.
+            </p>
+            <div class="mission-meta">
+              <span class="meta-label">Dificultad:</span>
+              <span class="meta-stars">⭐⭐⭐☆☆ (Cuidado con los guardias con pollo frito)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Expedientes Secretos de Enemigos del Camacho -->
+    <section id="enemigos" class="section enemies-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ARCHIVOS CLASIFICADOS // AMENAZAS DETECTADAS</span>
+          <h2 class="section-title">EXPEDIENTES SECRETOS DE ENEMIGOS</h2>
+          <p class="section-subtitle">Conoce a las organizaciones siniestras que conspiran contra El Camacho y el sagrado tomate.</p>
+        </div>
+
+        <div class="enemies-grid">
+          <!-- Enemigo 1: El Sindicato del Brócoli -->
+          <article class="enemy-card" data-threat="EXTREMA">
+            <div class="enemy-stamp">OBJETIVO N° 1</div>
+            <div class="enemy-avatar-wrap">
+              <span class="enemy-emoji">🥦🦹</span>
+            </div>
+            <h3 class="enemy-name">El Sindicato del Brócoli</h3>
+            <span class="threat-pill threat-high">AMENAZA: INSULTANTE AL PALADAR</span>
+            <p class="enemy-brief">
+              Secta culinaria clandestina empeñada en sustituir la salsa de tomate de las pizzas por crema de brócoli hervido sin sal.
+            </p>
+            <div class="enemy-details">
+              <div class="detail-row"><span class="d-label">Líder:</span> <span class="d-val">Barón De La Clorofila</span></div>
+              <div class="detail-row"><span class="d-label">Base Secreta:</span> <span class="d-val">Pasillo de congelados ecológicos</span></div>
+              <div class="detail-row"><span class="d-label">Debilidad Revelada:</span> <span class="d-val">Alergia al queso cheddar fundido</span></div>
+            </div>
+            <button class="btn-dossier-toggle" data-target="brocoli">
+              <span>🔍 DECODIFICAR EXPEDIENTE</span>
+            </button>
+            <div class="dossier-secret-box hidden" id="dossier-brocoli">
+              <p><strong>INFORME DE INTELIGENCIA:</strong> Intentaron infiltrar el huerto privado de El Camacho haciéndose pasar por lechugas ornamentales. Fueron repelidos con salsa tártara.</p>
+            </div>
+          </article>
+
+          <!-- Enemigo 2: La Liga Anti-Siestas -->
+          <article class="enemy-card" data-threat="CRÍTICA">
+            <div class="enemy-stamp">OBJETIVO N° 2</div>
+            <div class="enemy-avatar-wrap">
+              <span class="enemy-emoji">⏰🧛</span>
+            </div>
+            <h3 class="enemy-name">La Liga Anti-Siestas</h3>
+            <span class="threat-pill threat-critical">AMENAZA: CRUELDAD PSICOLÓGICA</span>
+            <p class="enemy-brief">
+              Conglomerado de despertadores analógicos, sirenas de fábrica y jefes de proyectos que exigen reuniones a las 3:00 PM.
+            </p>
+            <div class="enemy-details">
+              <div class="detail-row"><span class="d-label">Líder:</span> <span class="d-val">General Tic-Tac</span></div>
+              <div class="detail-row"><span class="d-label">Modus Operandi:</span> <span class="d-val">Llamadas telefónicas que pudieron ser emails</span></div>
+              <div class="detail-row"><span class="d-label">Debilidad Revelada:</span> <span class="d-val">Retirarles las pilas AA</span></div>
+            </div>
+            <button class="btn-dossier-toggle" data-target="siestas">
+              <span>🔍 DECODIFICAR EXPEDIENTE</span>
+            </button>
+            <div class="dossier-secret-box hidden" id="dossier-siestas">
+              <p><strong>INFORME DE INTELIGENCIA:</strong> El Camacho declaró las siestas de 4 horas como derecho fundamental universal. Los agentes de la Liga serán obligados a contar ovejas hasta el colapso.</p>
+            </div>
+          </article>
+
+          <!-- Enemigo 3: La Resistencia del Calcetín Huérfano -->
+          <article class="enemy-card" data-threat="SIGILOSA">
+            <div class="enemy-stamp">OBJETIVO N° 3</div>
+            <div class="enemy-avatar-wrap">
+              <span class="enemy-emoji">🧦🛸</span>
+            </div>
+            <h3 class="enemy-name">La Resistencia del Calcetín Huérfano</h3>
+            <span class="threat-pill threat-medium">AMENAZA: CONFUSIÓN DOMÉSTICA</span>
+            <p class="enemy-brief">
+              Red insurgente que vive en la dimensión oscura detrás del tambor de la lavadora. Planean armar un ejército gigante de algodón desparejado.
+            </p>
+            <div class="enemy-details">
+              <div class="detail-row"><span class="d-label">Líder:</span> <span class="d-val">Calcetín Rombos N° 41</span></div>
+              <div class="detail-row"><span class="d-label">Ubicación:</span> <span class="d-val">Fisuras espaciotemporales de Whirlpool</span></div>
+              <div class="detail-row"><span class="d-label">Debilidad Revelada:</span> <span class="d-val">Suavizante de ropa con aroma a lavanda</span></div>
+            </div>
+            <button class="btn-dossier-toggle" data-target="calcetin">
+              <span>🔍 DECODIFICAR EXPEDIENTE</span>
+            </button>
+            <div class="dossier-secret-box hidden" id="dossier-calcetin">
+              <p><strong>INFORME DE INTELIGENCIA:</strong> Nuestros novatos utilizan su tecnología de desaparición para entrenar camuflaje. La tregua actual pende de un hilo.</p>
+            </div>
+          </article>
+
+          <!-- Enemigo 4: El Cártel de la Pizza con Piña -->
+          <article class="enemy-card" data-threat="CÓSMICA">
+            <div class="enemy-stamp">OBJETIVO N° 4</div>
+            <div class="enemy-avatar-wrap">
+              <span class="enemy-emoji">🍍🍕</span>
+            </div>
+            <h3 class="enemy-name">El Cártel de la Pizza Tropical</h3>
+            <span class="threat-pill threat-high">AMENAZA: CRISIS DIPLOMÁTICA</span>
+            <p class="enemy-brief">
+              Sindicato interplanetario que profana la salsa de tomate de El Camacho combinándola con rodajas ácidas de piña caramelizada.
+            </p>
+            <div class="enemy-details">
+              <div class="detail-row"><span class="d-label">Líder:</span> <span class="d-val">Don Ananá Supremo</span></div>
+              <div class="detail-row"><span class="d-label">Alcance:</span> <span class="d-val">Ristorantes rebeldes de Nápoles y Marte</span></div>
+              <div class="detail-row"><span class="d-label">Debilidad Revelada:</span> <span class="d-val">Hacerles escuchar Megalovania a volumen máximo</span></div>
+            </div>
+            <button class="btn-dossier-toggle" data-target="pina">
+              <span>🔍 DECODIFICAR EXPEDIENTE</span>
+            </button>
+            <div class="dossier-secret-box hidden" id="dossier-pina">
+              <p><strong>INFORME DE INTELIGENCIA:</strong> Kirby devoró su nave nodriza de un solo bocado en 2024, pero pequeños remanentes aún distribuyen rodajas en pizzerías descuidadas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Test Interactivo de Aptitud -->
+    <section id="test" class="section test-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SIMULADOR PSICOTÉCNICO // EVALUACIÓN</span>
+          <h2 class="section-title">TEST DE APTITUD PARA FUTUROS ESPÍAS</h2>
+          <p class="section-subtitle">Descubre si tienes mente de Sans, apetito de Kirby o temple de secuestrador de tomates.</p>
+        </div>
+
+        <div class="test-container" id="quiz-container">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quiz-progress" style="width: 25%;"></div>
+          </div>
+
+          <div class="quiz-card" id="quiz-card">
+            <div class="quiz-question-number" id="quiz-qnum">PREGUNTA 1 DE 4</div>
+            <h3 class="quiz-question-text" id="quiz-qtext">
+              Te encuentras frente a un láser de seguridad infrarrojo en la bóveda de tomates del Vaticano. ¿Cómo procedes?
+            </h3>
+
+            <div class="quiz-options" id="quiz-options">
+              <!-- Dynamically populated or default options -->
+            </div>
+          </div>
+
+          <!-- Quiz Result Box (Initially Hidden) -->
+          <div class="quiz-result hidden" id="quiz-result">
+            <div class="result-badge">EVALUACIÓN COMPLETADA</div>
+            <h3 class="result-title" id="result-rank">RANGO: AGENTE TOMATE DE PRIMERA CLASE</h3>
+            <p class="result-desc" id="result-desc">
+              Tienes la audacia necesaria para desafiar las leyes de la física y el respeto cero por los vegetales ajenos.
+            </p>
+            <div class="result-action">
+              <a href="#reclutamiento" class="btn-primary">SOLICITAR CARNET OFICIAL</a>
+              <button class="btn-secondary" id="restart-quiz-btn">REPETIR TEST</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Formulario de Reclutamiento -->
+    <section id="reclutamiento" class="section recruit-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FORMULARIO OFICIAL AEC-900 // INCORPORACIÓN</span>
+          <h2 class="section-title">SOLICITUD DE INGRESO A LA RED CAMACHO</h2>
+          <p class="section-subtitle">Al rellenar este formulario, aceptas que El Camacho puede usar tus calcetines como antena parabólica.</p>
+        </div>
+
+        <div class="recruit-wrapper">
+          <form id="recruit-form" class="recruit-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="agent-alias">Nombre Clave / Alias Táctico <span class="req">*</span></label>
+                <input type="text" id="agent-alias" placeholder="Ej: Agente Tomate Veloz, Sombra Kirby, etc." required>
+                <span class="field-hint">No uses tu nombre real, a menos que tu nombre real sea muy épico.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="agent-coat">Talla de Gabardina de Espía <span class="req">*</span></label>
+                <select id="agent-coat" required>
+                  <option value="" disabled selected>Selecciona tu talla de sigilo</option>
+                  <option value="XS">XS (Para infiltrarse por tuberías de gas)</option>
+                  <option value="M">M (Estándar para espionaje en centros comerciales)</option>
+                  <option value="XL">XL (Con bolsillos térmicos para 12 tomates)</option>
+                  <option value="KIRBY">Tamaño Esfera Kirby (Sin costuras ni articulaciones)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Habilidades Especiales Clasificadas (Marca todas las que domines):</label>
+              <div class="checkbox-grid">
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="dormir" checked>
+                  <span class="checkmark"></span>
+                  Capacidad de dormir con los ojos abiertos en reuniones clave
+                </label>
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="wifi">
+                  <span class="checkmark"></span>
+                  Adivinar la contraseña del WiFi del vecino en menos de 2 intentos
+                </label>
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="sans">
+                  <span class="checkmark"></span>
+                  Hacer sonar Megalovania mentalmente en momentos de alta tensión
+                </label>
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="tomate">
+                  <span class="checkmark"></span>
+                  Distinguir un tomate Cherry de un tomate Perita en plena oscuridad
+                </label>
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="alien">
+                  <span class="checkmark"></span>
+                  Comunicación fluida con cucarachas y posibles seres de Marte
+                </label>
+                <label class="custom-check">
+                  <input type="checkbox" name="skills" value="invisibilidad">
+                  <span class="checkmark"></span>
+                  Invisibilidad espontánea cuando llega el momento de lavar los platos
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Retrato Táctico para la Credencial: <span class="req">*</span></label>
+              <div class="avatar-select-grid" id="avatar-select-grid">
+                <label class="avatar-option selected">
+                  <input type="radio" name="agent_avatar" value="🕵️‍♂️" checked>
+                  <span class="avatar-icon">🕵️‍♂️</span>
+                  <span class="avatar-name">Gabardina Clásica</span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="agent_avatar" value="🍅">
+                  <span class="avatar-icon">🍅</span>
+                  <span class="avatar-name">Tomate Sigiloso</span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="agent_avatar" value="👾">
+                  <span class="avatar-icon">👾</span>
+                  <span class="avatar-name">Kirby Cósmico</span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="agent_avatar" value="💀">
+                  <span class="avatar-icon">💀</span>
+                  <span class="avatar-name">Sans Infiltrado</span>
+                </label>
+                <label class="avatar-option">
+                  <input type="radio" name="agent_avatar" value="🥷">
+                  <span class="avatar-icon">🥷</span>
+                  <span class="avatar-name">Ninja Sombrío</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="agent-division">División a la que aspiras ingresar: <span class="req">*</span></label>
+              <select id="agent-division" required>
+                <option value="tomates">Comando Especial de Secuestro y Catación de Tomates</option>
+                <option value="derrocamientos">Escuadrón de Caída Rápida de Gobiernos y Juntas Vecinales</option>
+                <option value="cyber">Ciber-Infiltración, Memes Tácticos y Hackeo no ético</option>
+                <option value="hijos">Monitoreo Doméstico de Menores y Detección de Roblox</option>
+                <option value="alien">Diplomacia Secreta con Alienígenas de Cuatro Ojos</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="agent-pledge">¿Por qué juras lealtad incondicional a El Camacho? <span class="req">*</span></label>
+              <textarea id="agent-pledge" rows="3" placeholder="Escribe tu motivo sincero (Ej: Me prometieron inmunidad fiscal y una dotación de puré de tomate ilimitada)..." required></textarea>
+            </div>
+
+            <div class="form-disclaimer">
+              <label class="custom-check">
+                <input type="checkbox" id="terms-check" required>
+                <span class="checkmark"></span>
+                Acepto no revelar la ubicación de la base secreta ni aunque me amenacen con spoilers de mi serie favorita. Entiendo que esto es un portal cómico oficial.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">
+              <span class="btn-pulse"></span>
+              🖨️ PROCESAR SOLICITUD & GENERAR CREDENCIAL OFICIAL
+            </button>
+          </form>
+
+          <!-- Generated Spy ID Card Badge (Modal or Display) -->
+          <div class="id-card-output hidden" id="id-card-output">
+            <div class="card-congrats">
+              🎉 ¡SOLICITUD APROBADA POR EL SUPREMO CAMACHO! 🎉
+            </div>
+            <div class="spy-badge" id="printable-badge">
+              <div class="badge-header">
+                <div class="badge-logo">A.E.C.</div>
+                <div class="badge-agency">AGENCIA ESPIONAJE CAMACHO</div>
+                <div class="badge-clearance">CLEARANCE: CLASE-A</div>
+              </div>
+
+              <div class="badge-body">
+                <div class="badge-photo-box">
+                  <div class="badge-photo-inner" id="badge-photo-render">
+                    <!-- Photo rendering icon -->
+                    <span class="badge-emoji-avatar">🕵️‍♂️</span>
+                  </div>
+                  <span class="badge-auth-stamp">VERIFICADO</span>
+                </div>
+
+                <div class="badge-info">
+                  <div class="badge-line"><span class="lbl">ALIAS:</span> <span class="val" id="badge-alias">AGENTE X</span></div>
+                  <div class="badge-line"><span class="lbl">RANGO:</span> <span class="val" id="badge-rank">ESPÍA JUNIOR</span></div>
+                  <div class="badge-line"><span class="lbl">DIVISIÓN:</span> <span class="val" id="badge-div">SECUESTRO DE TOMATES</span></div>
+                  <div class="badge-line"><span class="lbl">CÓDIGO:</span> <span class="val" id="badge-code">CMC-99482-TOM</span></div>
+                  <div class="badge-line"><span class="lbl">LÍDER:</span> <span class="val highlight">EL CAMACHO (SANS/KIRBY)</span></div>
+                </div>
+              </div>
+
+              <div class="badge-footer">
+                <div class="barcode">||| | ||||| || |||||| | |||| ||| |||||</div>
+                <div class="badge-warning">VÁLIDO EN TODA LA VÍA LÁCTEA</div>
+              </div>
+            </div>
+
+            <div class="badge-actions">
+              <button class="btn-secondary" id="print-badge-btn">🖨️ IMPRIMIR / DESCARGAR CREDENCIAL</button>
+              <button class="btn-text" id="reset-form-btn">Crear Otra Identidad Falsa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Juramento y Autodestrucción -->
+    <section class="section oath-section">
+      <div class="container text-center">
+        <h2 class="oath-title">EL JURAMENTO DEL ESPÍA CAMACHO</h2>
+        <blockquote class="oath-text">
+          “Juro por la sombra de Sans, por el estómago infinito de Kirby y por el brillo carmesí de cada tomate en la faz de la galaxia: jamás delataré a mi líder El Camacho, jamás comeré una ensalada sin autorización y hackearé el universo con audacia y estilo.”
+        </blockquote>
+
+        <div class="self-destruct-box">
+          <p class="destruct-desc">¿Sospechas que un agente enemigo te está mirando la pantalla en este momento?</p>
+          <button id="self-destruct-btn" class="btn-destruct">
+            💣 ACTIVAR PROTOCOLO DE AUTODESTRUCCIÓN (5s)
+          </button>
+          <div id="destruct-countdown" class="destruct-timer hidden">5</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p><strong>A.E.C. (Agencia de Espionaje Camacho)</strong> — Todos los derechos reservados a través del continuo espacio-tiempo.</p>
+        <p class="footer-joke">Página de humor y sátira. Ningún tomate real ni gobernante fue lastimado gravemente durante el desarrollo de esta web.</p>
+      </div>
+      <div class="footer-right">
+        <span class="status-online">● RED SATELITAL CAMACHO EN LÍNEA</span>
+        <span class="ip-mock">IP DETECTADA: 192.168.0.TOMATE [ENCRIPTADA]</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="hiii.js"></script>
+</body>
+</html>
