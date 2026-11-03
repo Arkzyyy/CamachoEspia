@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Supreme Wisdom Generator ---
+  // --- Supreme Wisdom Generator (Animalese Speech + Typewriter) ---
   const wisdomBtn = document.getElementById('hear-wisdom-btn');
   const wisdomDisplay = document.getElementById('wisdom-display');
   const wisdomQuotes = [
@@ -173,20 +173,105 @@ document.addEventListener('DOMContentLoaded', () => {
     "“Un buen espía no duerme; simplemente recarga su batería cuántica con una siesta de 14 horas.”",
     "“Los marcianos nos enviaron un mensaje hace 3 años: 'Por favor apaguen el reggaetón los domingos'.”",
     "“He devorado tanques soviéticos enteros con salsa barbacoa. ¿Crees que me asusta tu firewall?”",
-    "“Recuerda: si el niño no quiere comer verduras, no es desobediencia, es un intento de golpe de estado doméstico.”"
+    "“Recuerda: si el niño no quiere comer verduras, no es desobediencia, es un intento de golpe de estado doméstico.”",
+    "“¿Sabías que la Luna está hecha de queso parmesano esperando un plató de espaguetis cósmicos? Nosotros la vigilamos.”",
+    "“El verdadero sigilo no es que no te vean; es mirar fijamente al guardia hasta que se sienta incómodo y se vaya él mismo.”",
+    "“Si hackeas una tostadora inteligente, asegúrate de dejar el pan tostado con mi silueta fedora.”",
+    "“La pizza con piña fue creada en un laboratorio enemigo para desestabilizar la paz mental de la galaxia.”",
+    "“Cualquier problema en el mundo se resuelve con una siesta estratégica, un tomate maduro y una dosis de Megalovania.”",
+    "“Un espía Camacho nunca tropieza: hace contacto deliberado con el suelo para evaluar la sismicidad del terreno.”",
+    "“Tengo 4,000 agentes infiltrados en reuniones de Zoom fingiendo que tienen mala conexión cuando les preguntan algo.”",
+    "“El secreto del universo cabe en una lata de salsa de tomate, pero no tengo abrelatas ahora mismo.”",
+    "“Derrocar un gobierno antes de las 11:00 AM es de mala educación. Espera al menos a que se tomen el café.”",
+    "“Mis espías no dejan huellas digitales, dejan pequeñas pegatinas de tomates en los servidores del enemigo.”",
+    "“¿Infiltrarse en el Pentágono? Demasiado fácil. El verdadero reto es doblar una sábana con elástico sin enloquecer.”",
+    "“Si me miras fijamente el ojo azul de Sans, escucharás el tintineo de mil tomates cayendo en cámara lenta.”",
+    "“La clave del espionaje moderno es fingir demencia con tanta convicción que los interrogadores duden de su propia existencia.”"
   ];
+
+  let speechTimeouts = [];
+
+  function stopAnimaleseSpeech() {
+    speechTimeouts.forEach(t => clearTimeout(t));
+    speechTimeouts = [];
+  }
+
+  function playAnimaleseLetter(char) {
+    if (!sfxEnabled) return;
+    initAudio();
+    if (!audioCtx) return;
+
+    // Pitch mapping according to character code
+    const code = char.toLowerCase().charCodeAt(0);
+    // Base frequency in the cute chirpy animalese range (350Hz - 850Hz)
+    let freq = 480 + ((code * 23) % 360);
+
+    // Vowels sound slightly brighter
+    if ('aeiouáéíóú'.includes(char.toLowerCase())) {
+      freq += 80;
+    }
+
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      const now = audioCtx.currentTime;
+
+      // Triangle/Sine mix gives that bubbly Animal Crossing/Kirby voice
+      osc.type = (code % 2 === 0) ? 'triangle' : 'sine';
+      osc.frequency.setValueAtTime(freq, now);
+      osc.frequency.exponentialRampToValueAtTime(freq * 0.88, now + 0.05);
+
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start(now);
+      osc.stop(now + 0.05);
+    } catch (e) {
+      // Audio safety
+    }
+  }
+
+  function speakAnimaleseText(text) {
+    stopAnimaleseSpeech();
+    wisdomDisplay.textContent = "";
+    let currentIndex = 0;
+
+    const typeSpeed = 32; // ms per character
+
+    function step() {
+      if (currentIndex < text.length) {
+        const char = text[currentIndex];
+        wisdomDisplay.textContent += char;
+
+        // Skip sound on spaces and special symbols
+        if (/[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]/.test(char)) {
+          // Play every letter or slightly varied to sound like Animalese chatter
+          playAnimaleseLetter(char);
+        }
+
+        currentIndex++;
+        // Add tiny pause on commas or periods
+        let delay = typeSpeed;
+        if (char === '.' || char === '!' || char === '?') delay = 220;
+        else if (char === ',' || char === ';') delay = 120;
+
+        const t = setTimeout(step, delay);
+        speechTimeouts.push(t);
+      }
+    }
+
+    step();
+  }
 
   if (wisdomBtn && wisdomDisplay) {
     wisdomBtn.addEventListener('click', () => {
       initAudio();
-      playTone(440, 0.08, 'triangle');
       const randomIdx = Math.floor(Math.random() * wisdomQuotes.length);
-      wisdomDisplay.style.opacity = '0.3';
-      setTimeout(() => {
-        wisdomDisplay.textContent = wisdomQuotes[randomIdx];
-        wisdomDisplay.style.opacity = '1';
-        playTone(659.25, 0.15, 'sine');
-      }, 150);
+      const chosenQuote = wisdomQuotes[randomIdx];
+      speakAnimaleseText(chosenQuote);
     });
   }
 
