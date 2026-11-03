@@ -1771,3 +1771,65 @@ body.self-destructed {
   }
 }
 
+/* ========================================================
+   ESTILOS DE IMPRESIÓN (SOLO LA CREDENCIAL/CARNET)
+   ======================================================== */
+@media print {
+  /* Ocultar todo el sitio web por defecto */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Hacer visible exclusivamente la credencial y su contenido interno */
+  #printable-badge,
+  #printable-badge * {
+    visibility: visible !important;
+  }
+
+  /* Posicionar la credencial limpia y centrada en la página impresa */
+  #printable-badge {
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 480px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    background: #0f172a !important;
+    color: #ffffff !important;
+    border: 2px solid #00f3ff !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Forzar visibilidad de colores de fondo en Chrome, Edge y Firefox */
+  html, body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .badge-header,
+  .badge-body,
+  .badge-footer,
+  .badge-photo-box {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .crt-overlay,
+  .noise-overlay,
+  .classified-marquee,
+  .main-header,
+  .main-footer,
+  .badge-actions,
+  .card-congrats {
+    display: none !important;
+  }
+}
+
